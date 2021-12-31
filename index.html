@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>fcc-form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Survey Form</h1>
+            <p id="description" class="description text-center">
+                Please help us by providing valid information
+            </p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email"
+                    required />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age" />
+            </div>
+            <div class="form-group">
+                <p>What's your gender?</p>
+                <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value>Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="transgender">Transgender</option>
+                    <option value="preferNo">Prefer not to say</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>Which beverage do you prefer?</p>
+                <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio"
+                        checked />Coffee</label>
+                <label>
+                    <input name="user-recommend" value="maybe" type="radio" class="input-radio" />Tea</label>
+
+                <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio" />Not interested
+                    in both</label>
+            </div>
+
+            <div class="form-group">
+                <p>
+                    Which technology according to you will have more boost in the future?
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+
+                <label><input name="prediction" value="blockchain" type="checkbox"
+                        class="input-checkbox" />Blockchain</label>
+                <label>
+                    <input name="prediction" value="ai-ml" type="checkbox" class="input-checkbox" />AI and ML</label>
+                <label><input name="prediction" value="data-science" type="checkbox" class="input-checkbox" />Data Science</label>
+                <label><input name="prediction" value="edge-computing" type="checkbox"
+                        class="input-checkbox" />Edge Computing</label>
+                <label><input name="prediction" value="quantum-computing" type="checkbox" class="input-checkbox" />Quantum Computing</label>
+                <label><input name="prediction" value="not-listed" type="checkbox"
+                        class="input-checkbox" />Other technology which is not listed here</label>
+            </div>
+
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea id="comments" class="input-textarea" name="comment"
+                    placeholder="Enter your additional comments here..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
